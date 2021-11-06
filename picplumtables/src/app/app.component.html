@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pic Plume Table</title>
+</head>
+
+<body>
+    <title>PicplumeMaths</title>
+    <div class="plateauJeu">
+        <img [@dalle1Todalle18]="isDalle18Trouve ? 'dalle18' : ''" class="eleve1" src="..\assets\Eleve1.png" alt="">
+        <div class="ligneMultiplicationhaut">
+            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication1}}</div>
+            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication2}}</div>
+            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication3}}</div>
+            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication4}}</div>
+            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication5}}</div>
+            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication6}}</div>
+        </div>
+        <div class="ligneCentrale">
+            <div class="colonneMultiplication">
+                <div class="dalleMultiplication TexteCentre">{{Multiplication7}}</div>
+                <div class="dalleMultiplication TexteCentre">{{Multiplication8}}</div>
+                <div class="dalleMultiplication TexteCentre">{{Multiplication9}}</div>
+            </div>
+            <div class="plateauResultat">
+                <!-- <app-resultat Resultat="{{Resultat1}}">
+
+                </app-resultat> -->
+                <div (click)="clicDalle1()" class="dalleResultat TexteCentre">
+                    {{Resultat1}}
+                    <img [hidden]="!dalle1Visible" class="imageResultat" src="..\assets\DalleMultiplication.jpg" alt="">
+                </div>
+                <div (click)="clicDalle2()" class="dalleResultat TexteCentre">
+                    {{Resultat2}}
+                    <img [hidden]="!dalle2Visible" class="imageResultat" src="..\assets\DalleMultiplication.jpg" alt="">
+                </div>
+                <div (click)="clicDalle3()" class="dalleResultat TexteCentre">
+                    {{Resultat3}}
+                    <img [hidden]="!dalle3Visible" class="imageResultat" src="..\assets\DalleMultiplication.jpg" alt="">
+                </div>
+                <div (click)="clicDalle4()" class="dalleResultat TexteCentre">
+                    {{Resultat4}}
+                    <img [hidden]="!dalle4Visible" class="imageResultat" src="..\assets\DalleMultiplication.jpg" alt="">
+                </div>
+                <div (click)="clicDalle5()" class="dalleResultat TexteCentre">
+                    {{Resultat5}}
+                    <img [hidden]="!dalle5Visible" class="imageResultat" src="..\assets\DalleMultiplication.jpg" alt="">
+                </div>
+                <div (click)="clicDalle6()" class="dalleResultat TexteCentre">
+                    {{Resultat6}}
+                    <img [hidden]="!dalle6Visible" class="imageResultat" src="..\assets\DalleMultiplication.jpg" alt="">
+                </div>
+                <div (click)="clicDalle7()" class="dalleResultat TexteCentre">
+                    {{Resultat7}}
+                    <img [hidden]="!dalle7Visible" class="imageResultat" src="..\assets\DalleMultiplication.jpg" alt="">
+                </div>
+                <div (click)="clicDalle8()" class="dalleResultat TexteCentre">
+                    {{Resultat8}}
+                    <img [hidden]="!dalle8Visible" class="imageResultat" src="..\assets\DalleMultiplication.jpg" alt="">
+                </div>
+                <div (click)="clicDalle9()" class="dalleResultat TexteCentre">
+                    {{Resultat9}}
+                    <img [hidden]="!dalle9Visible" class="imageResultat" src="..\assets\DalleMultiplication.jpg" alt="">
+                </div>
+            </div>
+            <div class="colonneMultiplication">
+                <div class="dalleMultiplication TexteCentre">{{Multiplication9}}</div>
+                <div class="dalleMultiplication TexteCentre">{{Multiplication8}}</div>
+                <div class="dalleMultiplication TexteCentre">{{Multiplication7}}</div>
+            </div>
+        </div>
+        <div class="ligneMultiplicationhaut">
+            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication6}}</div>
+            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication5}}</div>
+            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication4}}</div>
+            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication3}}</div>
+            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication2}}</div>
+            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication1}}</div>
+        </div>
+    </div>
+</body>
+
+</html>
