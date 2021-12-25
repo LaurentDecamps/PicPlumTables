@@ -10,28 +10,22 @@
 
 <body>
     <title>PicplumeMaths</title>
+    Tour du JOUEUR {{numeroJoueur}} :
     <div class="plateauJeu">
         <img 
             [@dalleTodalle]="dalleTrouveJoueur1" 
             class="eleve1" 
-            src="..\assets\Eleve1.png" alt="">
+            src="..\assets\Joueur 1.png" alt="">
         <img 
             [@dalleTodalle]="dalleTrouveJoueur2" 
             class="eleve1" 
-            src="..\assets\Eleve1.png" alt="">
+            src="..\assets\Joueur 2.png" alt="">
         <div class="ligneMultiplicationhaut">
-            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication1}}</div>
-            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication2}}</div>
-            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication3}}</div>
-            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication4}}</div>
-            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication5}}</div>
-            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication6}}</div>
+            <div *ngFor="let multiplication of LigneMultiplicationHaut" class="dalleMultiplicationHautBas TexteCentre">{{multiplication.litteral}}</div>
         </div>
         <div class="ligneCentrale">
             <div class="colonneMultiplication">
-                <div class="dalleMultiplication TexteCentre">{{Multiplication7}}</div>
-                <div class="dalleMultiplication TexteCentre">{{Multiplication8}}</div>
-                <div class="dalleMultiplication TexteCentre">{{Multiplication9}}</div>
+                <div *ngFor="let multiplication of LigneMultiplicationGauche" class="dalleMultiplication TexteCentre">{{multiplication.litteral}}</div>
             </div>
             <div class="plateauResultat">
                 <!-- <app-resultat Resultat="{{Resultat1}}">
@@ -44,18 +38,11 @@
                 </div>
             </div>
             <div class="colonneMultiplication">
-                <div class="dalleMultiplication TexteCentre">{{Multiplication9}}</div>
-                <div class="dalleMultiplication TexteCentre">{{Multiplication8}}</div>
-                <div class="dalleMultiplication TexteCentre">{{Multiplication7}}</div>
+                <div *ngFor="let multiplication of LigneMultiplicationDroite" class="dalleMultiplication TexteCentre">{{multiplication.litteral}}</div>
             </div>
         </div>
         <div class="ligneMultiplicationhaut">
-            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication6}}</div>
-            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication5}}</div>
-            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication4}}</div>
-            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication3}}</div>
-            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication2}}</div>
-            <div class="dalleMultiplicationHautBas TexteCentre">{{Multiplication1}}</div>
+            <div *ngFor="let multiplication of LigneMultiplicationBas" class="dalleMultiplicationHautBas TexteCentre">{{multiplication.litteral}}</div>
         </div>
     </div>
 </body>
