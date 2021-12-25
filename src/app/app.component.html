@@ -5,27 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pic Plume Table</title>
+    <title>Pic Plumes Table</title>
 </head>
 
 <body>
     <title>PicplumeMaths</title>
-    Tour du JOUEUR {{numeroJoueur}} :
+
+    <div class="tour">Tour du JOUEUR : {{numeroJoueur}}</div> 
     <div class="plateauJeu">
         <img 
             [@dalleTodalle]="dalleTrouveJoueur1" 
-            class="eleve1" 
-            src="..\assets\Joueur 1.png" alt="">
+            class="joueur1" 
+            src="assets\Joueur 1.png" alt="Pion du joueur 1">
         <img 
             [@dalleTodalle]="dalleTrouveJoueur2" 
-            class="eleve1" 
-            src="..\assets\Joueur 2.png" alt="">
+            class="joueur2" 
+            src="assets\Joueur 2.png" alt="Pion du joueur 2">
         <div class="ligneMultiplicationhaut">
             <div *ngFor="let multiplication of LigneMultiplicationHaut" class="dalleMultiplicationHautBas TexteCentre">{{multiplication.litteral}}</div>
         </div>
         <div class="ligneCentrale">
             <div class="colonneMultiplication">
-                <div *ngFor="let multiplication of LigneMultiplicationGauche" class="dalleMultiplication TexteCentre">{{multiplication.litteral}}</div>
+                <div *ngFor="let multiplication of LigneMultiplicationGauche" class="dalleMultiplication TexteCentre" script="">{{multiplication.litteral}}</div>
             </div>
             <div class="plateauResultat">
                 <!-- <app-resultat Resultat="{{Resultat1}}">
@@ -34,7 +35,7 @@
                 
                 <div *ngFor="let resultat of Resultats" (click)="clicDalle(resultat)" class="dalleResultat TexteCentre">
                     {{resultat.value}}
-                    <img [hidden]="!resultat.visible" class="imageResultat" src="..\assets\DalleMultiplication.jpg" alt="">
+                    <img [hidden]="!resultat.visible" class="imageResultat" src="assets\DalleMultiplication.jpg" alt="">
                 </div>
             </div>
             <div class="colonneMultiplication">
