@@ -5,11 +5,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ResultatComponent } from './resultat/resultat.component';
+import { DalleMultiplicationComponent } from './dalleMultiplication/dalle-multiplication/dalle-multiplication.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ResultatComponent
+    ResultatComponent,
+    DalleMultiplicationComponent
   ],
   imports: [
     BrowserModule,
