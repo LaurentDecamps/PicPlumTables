@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { trigger, transition, state, animate, style, AnimationEvent } from '@angular/animations';
 import { Resultat } from './models/resultat.model';
 import { Multiplication } from './models/multiplication.model';
-import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-root',
@@ -12,23 +11,23 @@ import { ThrowStmt } from '@angular/compiler';
     trigger('dalleTodalle', [
       state('dalle1', style({
         top: '5%',
-        left: '5%',
+        left: '4%',
       })),
       state('dalle18', style({
         top: '25%',
-        left: '5%',
+        left: '4%',
       })),
       state('dalle17', style({
         top: '45%',
-        left: '5%',
+        left: '4%',
       })),
       state('dalle16', style({
         top: '65%',
-        left: '5%',
+        left: '4%',
       })),
       state('dalle15', style({
         top: '85%',
-        left: '5%',
+        left: '4%',
       })),
       state('dalle14', style({
         top: '85%',
@@ -114,13 +113,13 @@ export class AppComponent {
   constructor() {
   
     this.shuffle(this.ResultatValue);
-    console.log("this.ResultatValue", this.ResultatValue);
-
+    
     this.ResultatValue.forEach(valeur => {
       this.Resultats.push(new Resultat(valeur, true))
     });
     // La postiion initiale du pion du joueur 1 est sur la dalle 1
     this.dalleTrouveJoueur1 = "dalle1";
+    // Celle du joueur 2 est sur la dalle 10 à l'opposé
     this.dalleTrouveJoueur2 = "dalle10";
 
     for (let index = 0; index < 9; index++) {
@@ -130,35 +129,28 @@ export class AppComponent {
 
     let index = 0;
     
-    console.log("this.Multiplications", this.Multiplications);
-    
     this.shuffle(this.Multiplications);
-    console.log("this.Multiplications shuffle", this.Multiplications);
 
     this.Multiplications.forEach(Multiplication => {
       if (index<6) this.LigneMultiplicationHaut.push(Multiplication);
       index++;
     });
     this.shuffle(this.LigneMultiplicationHaut);
-    console.log("this.LigneMultiplicationHaut", this.LigneMultiplicationHaut);
     
     for (let index = 5; index > -1; index--) {
       this.LigneMultiplicationBas.push(this.Multiplications[index])
     }
     this.shuffle(this.LigneMultiplicationBas);
-    console.log("this.LigneMultiplicationBas", this.LigneMultiplicationBas);
     
     for (let index = 8; index > 5; index--) {
       this.LigneMultiplicationDroite.push(this.Multiplications[index])
     }
     this.shuffle(this.LigneMultiplicationDroite);
-    console.log("this.LigneMultiplicationDroite", this.LigneMultiplicationDroite);
     
     for (let index = 6; index < 9; index++) {
       this.LigneMultiplicationGauche.push(this.Multiplications[index])
     }
     this.shuffle(this.LigneMultiplicationGauche);
-    console.log("this.LigneMultiplicationGauche", this.LigneMultiplicationGauche);
   }
 
   /**

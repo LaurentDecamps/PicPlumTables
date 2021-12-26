@@ -1,0 +1,6 @@
+<div class="box">
+    <select name="Table" id="Table">
+        <option *ngFor="let table of tables" value="table"></option>
+    </select>
+    <button mat-raised-button (click)=creerPartie() hidden="">Créer une partie</button>
+</div>

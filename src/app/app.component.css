@@ -16,15 +16,15 @@
 
 .joueur1 {
     position: absolute;
-    width: 8%;
+    width: 11%;
     height: 12%;
     top: 5%;
-    left: 5%;
+    left: 4%;
 }
 
 .joueur2 {
     position: absolute;
-    width: 8%;
+    width: 11%;
     height: 12%;
     top: 85%;
     left: 88%;
@@ -65,14 +65,20 @@
 }
 
 .dalleMultiplication {
-    margin: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 2px;
+    margin-bottom: 2px;
     border-width: 0, 5em;
     border-style: solid;
     height: 30%;
 }
 
 .dalleMultiplicationHautBas {
-    margin: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 1px;
+    margin-bottom: 1px;
     border-width: 0, 5em;
     border-style: solid;
     width: 16%;
