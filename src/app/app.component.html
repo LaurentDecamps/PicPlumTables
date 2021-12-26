@@ -10,9 +10,15 @@
 
 <body>
     <title>PicplumeMaths</title>
-
-    <div class="tour">Tour du JOUEUR : {{numeroJoueur}}</div> 
-    <div class="plateauJeu">
+    <!-- <div>
+        Table de jeu : 
+        <select [(ngModel)]="tableSelected">
+            <option *ngFor="let table of tables" value="table">{{table}}</option>
+        </select>
+    </div>
+    <button (click)="LancerLaPartie()">Lancer la partie</button> -->
+    <div class="tour" hidden="plateauVisible">Tour du JOUEUR : {{numeroJoueur}}</div> 
+    <div class="plateauJeu" hidden="plateauVisible">
         <img 
             [@dalleTodalle]="dalleTrouveJoueur1" 
             class="joueur1" 
