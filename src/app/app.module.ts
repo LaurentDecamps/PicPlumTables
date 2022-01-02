@@ -8,6 +8,7 @@ import { ResultatComponent } from './resultat/resultat.component';
 import { DalleMultiplicationComponent } from './dalleMultiplication/dalle-multiplication/dalle-multiplication.component';
 import { LobbyComponent } from './components/lobby/lobby.component';
 import { GameComponent } from './components/game/game.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { GameComponent } from './components/game/game.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
