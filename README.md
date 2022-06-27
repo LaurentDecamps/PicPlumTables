@@ -13,6 +13,6 @@ Le déploiement continue avec GitHub pages semble ne pas fonctionner. On teste �
 ### Git Hubpages
 Il semble qu'il faille faire la ligne de commande suivante pour générer un répertoire docs cible du build qui fonctionne bien sur github pages :
 
-    npm run build -- --base-href='https://laurentdecamps.github.io/PicPlumTables/
+    npm run build -- --base-href='https://laurentdecamps.github.io/PicPlumTables/'
 
 Le -- permet d'indiquer une option à la commande ng. Cette option, le base-ref permets d'indiquer un chemin de référence de base dans la balise &lt;base> contenu dans le &lt;head>.
