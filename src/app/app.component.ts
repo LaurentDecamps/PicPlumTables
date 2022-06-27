@@ -140,7 +140,7 @@ export class AppComponent {
       this.Resultats.push(new Resultat(valeur, true))
     });
     // La postiion initiale du pion du joueur 1 est sur la dalle 1
-    this.dalleJoueur1 = "dalle9";
+    this.dalleJoueur1 = "dalle1";
     // Celle du joueur 2 est sur la dalle 10 à l'opposé
     this.dalleJoueur2 = "dalle10";
 
